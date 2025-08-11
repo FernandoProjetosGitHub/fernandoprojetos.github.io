@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+:root {
+  /* === Tema Light === */
+  --color-bg: #F5E6CC;       /* Fundo claro */
+  --color-surface: #FFFFFF;  /* Superfície branca */
+  --color-primary: #0D1B2A;  /* Azul escuro principal */
+  --color-primary-dark: #1B263B; /* Azul médio */
+  --color-primary-light: #415A77; /* Azul claro */
+  --color-accent: #FFC300;   /* Amarelo ouro */
+  --color-text: #0D1B2A;     /* Texto padrão */
+  --color-text-light: #3A506B; /* Texto secundário */
+}
+
+:root[data-theme="dark"] {
+  /* === Tema Dark === */
+  --color-bg: #0D1B2A;       /* Fundo escuro */
+  --color-surface: #1B263B;  /* Superfície média */
+  --color-primary: #F5E6CC;  /* Bege claro para textos/destaques */
+  --color-primary-dark: #E0E1DD; /* Cinza claro */
+  --color-primary-light: #5BC0BE; /* Azul pastel */
+  --color-accent: #FFD60A;   /* Amarelo quente */
+  --color-text: #E0E1DD;     /* Texto padrão */
+  --color-text-light: #5BC0BE; /* Texto secundário */
+}
+body {
+  background: var(--color-bg);
+  font-family: 'Inter', Tahoma, Geneva, Verdana, sans-serif;
+}
+i {
+  color: var(--color-text);
+}
+header img {
+  border-radius: 100px;
+}
+.header {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  width: 100%;
+}
+.brand__header .brand__logo {
+  width: 3.25rem;
+  height: 3.25rem;
+}
+
+#toggleTheme {
+  font-size: 1.5rem;
+}
+.menu {
+  display: flex;
+  align-items: center;
+  background: var(--color-bg);
+}
+.menu__item {
+  width: 100%;
+}
+.menu--mobile {
+  justify-content: space-between;
+  border-top: 1px solid var(--color-primary-dark);
+  width: 100vw;
+  position: fixed;
+  bottom: 0;
+}
+.menu--mobile .menu__link {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  gap: .625rem;
+}
+.menu__link.active .menu__icon,
+.menu__link.active .menu__text {
+  color: var(--color-text-light);
+  font-weight: 600;
+}
+.menu__icon, .menu__text {
+  color: var(--color-text);
+}
+.menu__icon {
+  font-size: 1.5rem;
+}
+.menu__text {
+  font-size: .75rem;
+  text-transform: uppercase;
+}
+@media (min-width: 768px) {
+  .menu--mobile {
+    display: none;
+  }
+}
