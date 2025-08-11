@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
 
-:root {
+
+:root[data-theme="light"]{
   /* === Tema Light === */
   --color-bg: #F5E6CC;       /* Fundo claro */
   --color-surface: #FFFFFF;  /* Superfície branca */
@@ -23,12 +25,38 @@
   --color-text: #E0E1DD;     /* Texto padrão */
   --color-text-light: #5BC0BE; /* Texto secundário */
 }
+
 body {
   background: var(--color-bg);
   font-family: 'Inter', Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--color-primary);
+}
+a {
+  color: var(--color-text)
+}
+a:hover {
+  color: var(--color-primary-light);
+  font-weight: 600;
 }
 i {
   color: var(--color-text);
+}
+b {
+  font-weight: 400;
+}
+h1 {
+  font-size: 2.5rem;
+  font-weight: 200;
+}
+h1, h2, h3 {
+  font-family: 'League Spartan', Tahoma, Geneva, Verdana, sans-serif;
+  text-transform: uppercase;
+  color: var(--color-text);
+  font-weight: 200;
+}
+p {
+  font-size: 1.25rem;
+  text-align: justify;
 }
 header img {
   border-radius: 100px;
@@ -41,6 +69,10 @@ header img {
   padding: 0.5rem 1rem;
   width: 100%;
 }
+.header__toggle {
+    display: flex;
+    justify-content: flex-end;
+  }
 .brand__header .brand__logo {
   width: 3.25rem;
   height: 3.25rem;
@@ -48,6 +80,8 @@ header img {
 
 #toggleTheme {
   font-size: 1.5rem;
+  cursor: pointer;
+  transition: ease-in-out 4s;
 }
 .menu {
   display: flex;
@@ -73,7 +107,9 @@ header img {
   gap: .625rem;
 }
 .menu__link.active .menu__icon,
-.menu__link.active .menu__text {
+.menu__link.active .menu__text,
+.menu__link:hover .menu__icon,
+.menu__link:hover .menu__text {
   color: var(--color-text-light);
   font-weight: 600;
 }
@@ -87,8 +123,190 @@ header img {
   font-size: .75rem;
   text-transform: uppercase;
 }
+.header__nav {
+  display: none;
+}
+.menu--principal {
+  gap: 1rem;
+}
+.menu--social {
+  gap: 1rem;
+}
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.625rem;
+  width: 70%;
+  background: transparent;
+  border-radius: 3.125rem;
+  padding: 0.875rem 1.5rem;
+  transition: ease-in-out .3s;
+  cursor: pointer;
+}
+.btn:hover {
+  transform: scale(1.05);
+  transition: ease-in-out .3s;
+}
+.btn span, .btn i {
+  font-size: 1.25rem;
+  text-transform: uppercase;
+}
+.btn--primary span {
+  color: var(--color-primary);
+}
+.btn--primary {
+  border: 1px solid var(--color-primary-dark);
+}
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2.5rem 1rem;
+}
+.main__content1 {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.main__content2{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.main__content2 img {
+  border-radius: 18px;
+
+}
+.skills {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+  padding: 6.25rem 1rem 2rem;
+  background: var(--color-surface);
+  margin-top: -5.5rem;
+}
+.skills h2{
+  text-transform: none;
+  font-size: 2rem;
+}
+.skills__list {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: .5rem;
+}
+.skills__item {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 4.8rem;
+  height: 4.8rem;
+  aspect-ratio: 1/1;
+  border: 1px solid var(--color-surface);
+  border-radius: 50rem;
+}
+.skills__logo {
+  height: 2.4rem;
+}
+footer {
+  margin-bottom: 5rem;
+}
+footer p{
+  font-size: .875rem;
+  text-align: center;
+  padding: 1rem;
+}
 @media (min-width: 768px) {
-  .menu--mobile {
+  .header {
+    position: fixed;
+    z-index: 2;
+    border-bottom: 1px solid var(--color-primary-dark);
+    padding: 1rem 4rem;
+    background-color: var(--color-bg);
+  }
+  .nav--mobile {
     display: none;
+  }
+  .header__nav {
+    display: flex;
+  }
+  .header__nav,
+  .header__toggle {
+    min-width: 30%;
+  }
+
+  .brand__header {
+    order: -1;
+  }
+  h1 {
+    font-size: 4rem;
+  }
+  main {
+    padding: 8rem 6rem 4rem;
+  }
+  .main__content1 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    
+  }
+  .skills {
+    padding: 6.25rem 6rem 2rem;
+    margin-top: -6rem;
+  }
+  footer {
+    margin: 0;
+  }
+}
+@media (min-width: 1200px) {
+  main {
+    padding: 12rem 6rem 2rem;
+  }
+  .main__content1 .btn {
+    width: auto;
+  }
+  .skills {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10rem 6rem 4rem;
+  }
+  .skills h2 {
+    font-size: 3.5rem;
+    width: 60%;
+  }
+  .skills__list {
+    gap: 1rem;
+  }
+  .skills__item {
+  width: 5rem;
+  height: 5rem;
+
+}
+.skills__logo {
+  height: 3rem;
+}
+}
+@media (min-width: 1400px) {
+  h1 {
+    font-size: 6.25rem;
+  }
+  p {
+    font-size: 1.5rem;
+  }
+  .header {
+    padding: 1rem 8rem;
+  }
+  main {
+    padding: 12rem 15rem 2rem;
+  }
+  .skills {
+    padding: 10rem 15rem 4rem;
   }
 }
