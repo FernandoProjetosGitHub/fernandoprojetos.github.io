@@ -51,7 +51,7 @@
       <div class="brand__header">
         <img
           class="brand__logo"
-          src="src/assets/imgs/android-chrome-192x192.png"
+          src="src/assets/imgs/brand-header.png"
           alt="Logo Unraveling Blue"
         />
       </div>
@@ -91,7 +91,7 @@
     </nav>
     <!-- Fim Do Nav -->
     <!-- Inicio Do Main -->
-    <main>
+    <main id="home">
       <div class="main__content1">
         <h1><b>Soluções Criativas &</b> Desenvolvimento Front-end</h1>
         <p>Fernando Augusto Viana, Sete-Lagoas-MG, Desenvolvedor Front-end.</p>
@@ -100,59 +100,377 @@
           <li>
             <a
               class="menu__link"
-              href="https://github.com/FernandoProjetosGitHub"
+              href="https://github.com/FernandoProjetosGitHub" target="_blank"
             >
               <i class="menu__icon bi bi-github"></i>
             </a>
           </li>
           <li>
-            <a class="menu__link" href="">
+            <a class="menu__link" href="https://www.linkedin.com/in/fernando-augusto-viana-a1347b37a/?trk=opento_sprofile_topcard"  target="_blank">
               <i class="menu__icon bi bi-linkedin"></i>
             </a>
           </li>
           <li>
-            <a class="menu__link" href="">
+            <a class="menu__link" href="https://www.instagram.com/p4cote_" target="_blank">
               <i class="menu__icon bi bi-instagram"></i>
             </a>
           </li>
         </ul>
-        <button class="btn btn--primary">
-          <span>Ver Projetos</span>
-          <i class="bi bi-arrow-down-right"></i>
-        </button>
+        <!-- Button -->
+        <a href="#projetos">
+          <button class="btn btn--primary">
+            <span>Ver Projetos</span>
+            <i class="bi bi-arrow-down-right"></i>
+          </button>
+        </a>
+        <!-- Button -->
       </div>
       <div class="main__content2">
         <img
-          src="src/assets/imgs/unraveling-blue.png"
+          class="logo"
+          src="src/assets/imgs/unraveling-blue-brand.png"
           width="500px"
         />
       </div>
     </main>
+    <!-- Fim Do Main -->
+    <!-- Inicio Das Sections -->
+     <!-- Skills -->
     <section class="skills">
       <h2>Conhecimento nas principais tecnologias do mercado</h2>
+      <!-- Inicio Das Tecnologias -->
       <ul class="skills__list">
         <li class="skills__item">
-          <img src="src/assets/imgs/html.png" alt="Logo Html" class="skills__logo">
+          <img
+            src="src/assets/imgs/skills/html.png"
+            alt="Logo Html"
+            class="skills__logo"
+          />
         </li>
         <li class="skills__item">
-          <img src="src/assets/imgs/css.png" alt="Logo Css" class="skills__logo">
+          <img
+            src="src/assets/imgs/skills/css.png"
+            alt="Logo Css"
+            class="skills__logo"
+          />
         </li>
         <li class="skills__item">
-          <img src="src/assets/imgs/js.png" alt="Logo JavaScript" class="skills__logo">
+          <img
+            src="src/assets/imgs/skills/js.png"
+            alt="Logo JavaScript"
+            class="skills__logo"
+          />
         </li>
         <li class="skills__item">
-          <img src="src/assets/imgs/react.png" alt=" Logo React" class="skills__logo">
+          <img
+            src="src/assets/imgs/skills/react.png"
+            alt=" Logo React"
+            class="skills__logo"
+          />
         </li>
-        
       </ul>
+      <!-- Fim Das Tecnologias-->
     </section>
-    <!-- Fim Do Main -->
+    <!-- Projetos -->
+    <section id="projetos" class="projects">
+      <h2>Projetos</h2>
+      <div class="projects__container">
+        <div class="projects__card">
+          <img
+            class="card__cover"
+            src="src/assets/imgs/projects/beecrowd-dark-mode.png"
+            alt="Logo Beecrowd"
+          />
+          <div class="card__body">
+          <h3 class="card__tittle">Resolução de desafios em JS na plataforma Beecrowd</h3>
+          <p class="card__description">Iniciante, Intermediário e Strings</p>
+          <ul class="card__list">
+            <li>Resoluções de desafios;</li>
+            <li>Iniciantes e Intermediários;</li>
+            <li>Incluindo alguns de strings.</li>
+          </ul>
+          <!-- Inicio Das Tecnologias -->
+          <ul class="skills__list">
+            <li class="skills__item">
+              <img
+                src="src/assets/imgs/skills/js.png"
+                alt="Logo JavaScript"
+                class="skills__logo"
+              />
+            </li>
+          </ul>
+          <!-- Fim Das Tecnologias-->
+           <div class="card__buttons">
+            <button class="btn btn--primary">
+            <a href="https://judge.beecrowd.com/pt/problems/index/1?page=7" target="_blank">
+              <span>Prévia</span>
+              <i class="bi bi-arrow-up-right"></i>
+            </a>
+            </button>
+            <button class="btn">
+            <a href="https://github.com/FernandoProjetosGitHub/Beecrowd" target="_blank">
+              <span>Repositório</span>
+            </a>
+            
+            </button>
+            </div>
+           </div>
+        </div>
+        <div class="projects__card card--reverse card--bglight">
+          <img
+            class="card__cover"
+            src="src/assets/imgs/projects/project-2.png"
+            alt="Lorem ipsum dolor sit amet, consectetur"
+          />
+          <div class="card__body">
+          <h3 class="card__tittle">Lorem ipsum dolor sit amet consectetur adipisicing elit</h3>
+          <p class="card__description">Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+          <ul class="card__list">
+            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit;</li>
+            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit;</li>
+            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+          </ul>
+          <!-- Inicio Das Tecnologias -->
+          <ul class="skills__list">
+            <li class="skills__item">
+              <img
+                src="src/assets/imgs/skills/html.png"
+                alt="Logo Html"
+                class="skills__logo"
+              />
+            </li>
+            <li class="skills__item">
+              <img
+                src="src/assets/imgs/skills/css.png"
+                alt="Logo Css"
+                class="skills__logo"
+              />
+            </li>
+            <li class="skills__item">
+              <img
+                src="src/assets/imgs/skills/js.png"
+                alt="Logo JavaScript"
+                class="skills__logo"
+              />
+            </li>
+            <li class="skills__item">
+              <img
+                src="src/assets/imgs/skills/react.png"
+                alt=" Logo React"
+                class="skills__logo"
+              />
+            </li>
+          </ul>
+          <!-- Fim Das Tecnologias-->
+           <div class="card__buttons">
+            <button class="btn btn--primary">
+            <span>Prévia</span>
+            <i class="bi bi-arrow-up-right"></i>
+            </button>
+            <button class="btn">
+            <a href="https://github.com/FernandoProjetosGitHub/Desafios-BootCamp-Santander-Dio" target="_blank">
+              <span>Repositório</span>
+            </a>
+            
+            </button>
+            </div>
+           </div>
+        </div>
+        <div class="projects__card">
+          <img
+            class="card__cover"
+            src="src/assets/imgs/projects/project-3.jpg"
+            alt="Lorem ipsum dolor sit amet, consectetur"
+          />
+          <div class="card__body">
+          <h3 class="card__tittle">Lorem ipsum dolor sit amet, consectetur</h3>
+          <p class="card__description">Lorem ipsum dolor sit amet, consectetur</p>
+          <ul class="card__list">
+            <li>Lorem ipsum dolor sit amet, consectetur;</li>
+            <li>Lorem ipsum dolor sit amet, consectetur;</li>
+            <li>Lorem ipsum dolor sit amet, consectetur.</li>
+          </ul>
+          <!-- Inicio Das Tecnologias -->
+          <ul class="skills__list">
+            <li class="skills__item">
+              <img
+                src="src/assets/imgs/skills/html.png"
+                alt="Logo Html"
+                class="skills__logo"
+              />
+            </li>
+            <li class="skills__item">
+              <img
+                src="src/assets/imgs/skills/css.png"
+                alt="Logo Css"
+                class="skills__logo"
+              />
+            </li>
+            <li class="skills__item">
+              <img
+                src="src/assets/imgs/skills/js.png"
+                alt="Logo JavaScript"
+                class="skills__logo"
+              />
+            </li>
+            <li class="skills__item">
+              <img
+                src="src/assets/imgs/skills/react.png"
+                alt=" Logo React"
+                class="skills__logo"
+              />
+            </li>
+          </ul>
+          <!-- Fim Das Tecnologias-->
+           <div class="card__buttons">
+            <button class="btn btn--primary">
+            <span>Prévia</span>
+            <i class="bi bi-arrow-up-right"></i>
+            </button>
+            <button class="btn">
+            <a href="https://github.com/FernandoProjetosGitHub/Desafios-BootCamp-Santander-Dio" target="_blank">
+              <span>Repositório</span>
+            </a>
+            
+            </button>
+            </div>
+           </div>
+        </div>
+        <a href="https://github.com/FernandoProjetosGitHub" target="_blank">
+          <button class="btn btn--primary">
+            <span>Ver Todos os Projetos</span>
+            <i class="bi bi-arrow-up-right"></i>
+        </button>
+        </a>
+      </div>
+    </section>
+    <!-- Sobre Mim -->
+     <section id="sobre" class="about">
+      <div class="about__content1">
+        <img src="src/assets/imgs/unraveling-blue-brand.png" width="400px" alt="" class="about_photo"></img>
+          <div class="about__description">
+            <h2>Sobre mim</h2>
+            <p>Fernando Augusto Viana(Blue). Entusiasta de artes e tecnologia, meu contato com o tema começou com jogos eletrônicos, sou um amante dos games e pretendo ser um profissional dedicado à tecnologia. Comecei essa jornada em outubro de 2024 e estou me refinando à procura do primeiro emprego.</p>
+          
+          <div class="about_icons">
+            <i class="bi bi-translate"></i>
+            <span>Inglês: Básico</span>
+          </div>
+          <div class="description__buttons">
+            <button class="btn btn--primary">
+                <a href="https://linkedin.com/in/fernando-augusto-viana-a1347b37a" target="_blank">
+                  <span>Conecte-se Comigo</span>
+                  <i class="bi bi-arrow-up-right"></i>
+                </a>
+            </button>
+            <button class="btn">
+                <a href="https://github.com/FernandoProjetosGitHub" target="_blank">
+                  <span>Currículo</span>
+                </a>
+              </button>
+            </div>
+          </div>
+        
+      </div>
+      <div class="about__content2">
+        <div class="col1">
+          <div class="row1">
+            <h3>Formação</h3>
+            <h4>Desenvolvedor Front-end Web</h4>
+            <span>Out 2024 - Atualmente</span>
+            <div class="about__icons">
+              <i class="bi bi-bank"></i>
+              <span>Dio/Udemy</span>
+            </div>
+          </div>
+          <div class="row2">
+            <h3>Experiências</h3>
+            <h4>Desenvolvedor</h4>
+            <span>Alguns pequenos projetos inacabados, pretendo dar continuidade após concluir o curso
+              da DIO.
+            </span>
+          </div>
+        </div>
+      
+        <div class="col2">
+          <h3>Cursos</h3>
+          <div id="accordion">
+          <div class="accordion__item active">
+            <button class="accordion__header start">
+            <span>JavaScript, HTML, CSS, Node.JS, Lógica, DOM, Integração com Excel e MongoDB, Jogos.</span>
+            <i class="bi bi-caret-down-fill"></i>
+            </button>
+            <div class="accordion__body">
+              <p>
+                Udemy, curso do professor Clevison Santos, em progresso
+              </p>
+            </div>
+          </div>
+          <div class="accordion__item">
+            <button class="accordion__header">
+            <span>Desenvolvimento Web Completo</span>
+            <i class="bi bi-caret-down-fill"></i>
+            </button>
+            <div class="accordion__body">
+              <p>
+                Udemy, curso dos professores Jamilson Damasceno e Jorge Sant Ana.
+              </p>
+            </div>
+          </div>
+          <div class="accordion__item">
+            <button class="accordion__header end">
+            <span>BootCamp Santander/Dio</span>
+            <i class="bi bi-caret-down-fill"></i>
+            </button>
+            <div class="accordion__body end">
+              <p>
+                Digital Innovation One, bootcamp imersivo.
+              </p>
+            </div>
+          </div>
+
+          </div>
+        </div>
+      </div>
+     </section>
+     <section id="contato" class="contact">
+      <h2>Contate-me</h2>
+      <p>Estou disponível para serviços e novas conexões. Contate-me via e-mail
+        e conecte-se comigo através das minhas redes sociais.
+      </p>
+      <ul class="menu menu--social">
+        <li>
+          <a class="menu__link" href="https://github.com/FernandoProjetosGitHub" target="_blank">
+            <i class="menu__icon bi bi-github"></i>
+            <span>GitHub</span>
+          </a>
+        </li>
+        <li>
+          <a class="menu__link" href="https://www.linkedin.com/in/fernando-augusto-viana-a1347b37a/?trk=opento_sprofile_topcard"  target="_blank">
+          <i class="menu__icon bi bi-linkedin"></i>
+            <span>LinkedIn</span>
+          </a>
+        </li>
+        <li>
+          <a class="menu__link" href="https://www.instagram.com/p4cote_" target="_blank"">
+          <i class="menu__icon bi bi-instagram"></i>
+            <span>instagram</span>
+          </a>
+        </li>
+        </ul>
+        <div>
+          <button class="btn btn--primary">
+              <span>fernandoaugustoprojetos@gmail.com</span>
+          </button>
+        </div>
+     </section>
+    <!-- Fim Das Sections -->
     <!-- Inicio Do Footer -->
     <footer>
       <p>
         @2025. Todos Os Direitos Reservados. Fernando Augusto Viana.
         Desenvolvido por
-        <a href="https://github.com/FernandoProjetosGitHub">Blue</a>
+        <a href="https://github.com/FernandoProjetosGitHub" target="_blank">Blue</a>
       </p>
     </footer>
     <!-- Fim Do Footer -->
